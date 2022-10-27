@@ -58,8 +58,13 @@
                         <div class="text-muted fst-italic mb-2">{{ post.created_at }}에 게시되었습니다</div>
                     </header>
                     <!-- Preview image figure-->
-                    <!-- <figure class="mb-4"><img class="img-fluid rounded" src="https://picsum.photos/seed/{{ p.pk }}}/900/400" alt="..." /></figure> -->
-                    <figure class="mb-4"><img class="img-fluid rounded" src="{{ post.head_image.url }}" alt="..." /></figure>
+                    
+                    {% if post.head_image %}
+                        <figure class="mb-4"><img class="img-fluid rounded" src="{{ post.head_image.url }}" alt="{{ p }} head image" /></figure>
+                    {% else %}
+                        <figure class="mb-4"><img class="img-fluid rounded" src="https://picsum.photos/seed/{{ p.pk }}}/900/400" alt="random_image" /></figure>
+                    {% endif %}
+                    
                     <section class="mb-5">
                         <p class="fs-5 mb-4"> {{ post.content }} </p>
                     </section>
