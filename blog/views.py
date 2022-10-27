@@ -7,7 +7,7 @@ from .models import Post
 # blog list up
 class PostList(ListView):
     model = Post # 클래스명
-    template_name = 'blog/index.html' # 렌더링할 템플릿
+    # template_name = 'blog/index.html' # 렌더링할 템플릿
 
 # def index(request):
 #     posts = Post.objects.all().order_by('-pk')
@@ -22,14 +22,15 @@ class PostList(ListView):
 
 class PostDetail(DetailView):
     model = Post # 클래스명
+    
 
-def single_post_page(request, pk):
-    post = Post.objects.get(pk=pk)
+# def single_post_page(request, pk):
+#     post = Post.objects.get(pk=pk)
 
-    return render(
-        request,
-        'blog/single_post_page.html',
-        {
-            'post' : post,
-        }
-    )
+#     return render(
+#         request,
+#         'blog/single_post_page.html',
+#         {
+#             'post' : post,
+#         }
+#     )
