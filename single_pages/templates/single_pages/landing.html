@@ -1,20 +1,24 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>유네영입니다~</title>
-</head>
-<body>
-    <nav>
-        <a href="/blog/">Blog</a>
-        <a href="/about_me/">About me</a>
-    </nav>
+{% extends 'base.html' %}
+{% load static %}
 
-    <h1> 안녕하세요. 유네영입니다.</h1>
-    <h2> 대문페이지에요. </h2>
-    <h3> 아직 만들진 않았어요. </h3>
+{%  block main_area %}
 
-</body>
-</html>
+<!-- Product section-->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="https://picsum.photos/seed/126/600/700" alt="..." /></div>
+            <div class="col-md-6">
+                <div class="small mb-1">--------------------------------------</div>
+                <h1 class="display-5 fw-bolder">HOMEPAGE</h1>
+                <div class="small mb-1">--------------------------------------</div>
+                <p class="lead">Morbi et libero ultricies, euismod quam a, rutrum eros. In purus tortor, congue tincidunt augue eget, auctor hendrerit diam. Maecenas pulvinar vestibulum pellentesque. Proin ut felis ex. Vestibulum elementum viverra mi in accumsan. Morbi a lacinia lectus. Fusce commodo dolor ac lacus varius, a tempor leo dignissim. Vivamus commodo vitae lacus eget hendrerit. Nullam facilisis, purus eu ullamcorper cursus, odio diam ultrices est, a tristique leo metus eget est. Nunc ac orci quis ex congue lobortis. Morbi ut sapien porta sapien dapibus mollis ut vel neque. Duis vel felis non mauris eleifend luctus non sit amet nibh.</p>
+                <div class="d-flex">
+    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{%  endblock main_area %}
