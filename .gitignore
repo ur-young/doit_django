@@ -129,4 +129,6 @@ dmypy.json
 .pyre/
 
 # User add
+.idea/
 migrations/
+_media/
