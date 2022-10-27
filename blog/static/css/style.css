@@ -1,3 +1,7 @@
 div.contents {
     margin-top: 60px;
 }
+
+div.right {
+    text-align: right;
+}
