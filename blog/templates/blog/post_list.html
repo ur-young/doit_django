@@ -22,6 +22,16 @@
                         <span class="badge badge-secondary float-right"> 미분류 </span>
                     {% endif %}
                     <div class="small text-muted"> {{ p.created_at }}, <a href="#"> {{ p.author | upper }}</a>에 의해 작성된 글입니다. </div>
+                    
+                    {% if p.tags.exists %}
+                    <i class="bi bi-tags"></i>
+                        {% for tag in p.tags.iterator %}
+                            <a href="{{ tag.get_absolute_url }}"> <span class="badge badge-pill badge-light"> {{ tag }} </span></a>
+                        {% endfor %}
+                        <br/>
+                        <br/>
+                    {% endif %}
+                    
                     <h2 class="card-title"> <a href="{{ p.get_absolute_url }}">{{ p.title }} </a> </h2>
                     
                     {% if p.hook_text %}
