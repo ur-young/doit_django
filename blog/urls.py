@@ -4,6 +4,7 @@ from .views import PostList, PostDetail
 from . import views
 
 urlpatterns = [
+    path('category/<str:slug>/', views.category_page),
     path('', views.PostList.as_view()), # CBV 방식의 call
     # path('', index, name="index"), # FBV 방식의 call
     path('<int:pk>/', views.PostDetail.as_view(), name='post_detail')
