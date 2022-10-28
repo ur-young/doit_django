@@ -14,8 +14,7 @@
                         <h5 class="text-muted"> {{ post.hook_text }}</h5>
 
                         <!-- Post meta content-->
-                        <div class="text-muted fst-italic mb-2">{{ post.created_at }}에 게시되었습니다</div>
-                        
+                        <div class="text-muted fst-italic mb-2">{{ post.created_at }}, <a href="#"> {{ post.author | upper }}</a>에 의해 작성된 글입니다.</div>
                         <!-- download button -->
                         <div class="container right">
                         {% if post.file_upload %}
